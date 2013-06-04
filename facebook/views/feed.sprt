@@ -1,0 +1,38 @@
+{{ include header.sprt }}
+
+{{ get /data/friends/user/:session.user._id as relation }}
+
+<ul id="friends">
+{{ each relation as r }}
+	{{ get /data/users/_id/:r.friend as friend }}
+
+	<li><a href="/profile/{{friend.name}}">{{friend.name}}</a></li>
+{{ /each }}
+</ul>
+
+{{ if session.user }}
+<form id="post" action="/data/feed?goto={{self.url}}" method="post">
+	<label>Post a message:</label>
+	<textarea name="content" placeholder="What's in your head?"></textarea>
+	<button type="submit">Post</button>
+</form>
+
+<div id="feed">
+{{ each relation as r }}
+	{{ get /data/feed/_creator/:r.friend?limit=10 as friendFeed }}
+	{{ each friendFeed as item }}
+		<div class="item">
+			<strong>{{item._creatorName}}</strong>
+			<p>{{item.content}}</p>
+			<em class="timestamp">{{item._created}}</em>
+		</div>
+	{{ /each }}
+{{ /each }}
+</div>
+
+{{ else }}
+
+<h2>Welcome to FaceBlock</h2>
+<a href="/login">Login</a> or <a href="/register">Create an account</a>.
+
+{{ /if }}

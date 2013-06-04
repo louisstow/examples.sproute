@@ -1,0 +1,6 @@
+{
+	"/": "feed",
+	"/profile/:name": "profile",
+	"/login": "login",
+	"/register": "register"
+}

@@ -1,0 +1,29 @@
+{{ include header.sprt }}
+{{ get /data/users/name/:params.name?single=true as user }}
+
+<h2>{{user.name}}</h2>
+
+<form action="/data/friends" method="post">
+	<input type="hidden" name="friend" value="{{user._id}}" />
+	<button type="submit">Add as friend</button>
+</form>
+
+{{ get /data/feed/_creator/$(user._id) as feed }}
+
+{{ if session.user }}
+<form id="post" action="/data/feed?goto={{self.url}}" method="post">
+	<label>Post a message:</label>
+	<textarea name="content">@{{user.name}} </textarea>
+	<button type="submit">Post</button>
+</form>
+{{ /if }}
+
+<div id="feed">
+{{ each feed as item }}
+	<div class="item">
+		<strong>{{item._creatorName}}</strong>
+		<div class="content">{{item.content}}</div>
+		<em>{{item._created}}</em>
+	</div>
+{{ / }}
+</div>

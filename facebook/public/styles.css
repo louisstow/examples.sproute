@@ -1,0 +1,63 @@
+body { 
+	font-family: Helvetica, Arial, sans-serif; 
+	padding: 0 20px 20px 20px;
+	margin: 0 auto;
+	width: 900px;
+	color: #444;
+}
+
+#header {
+	background: #0044ef;
+	color: #eee;
+	padding: 5px 10px;
+}
+
+#header h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#header a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 600;
+}
+
+#post label {
+	display: block;
+}
+
+#post {
+	padding: 5px;
+	border: 1px solid #ccc;
+	width: 200px;
+	float: left;
+}
+
+#post button {
+	display: block;
+}
+
+#post textarea {
+	width: 100%;
+	height: 70px;
+	margin: 5px 0;
+}
+
+#feed {
+	float: left;
+	margin-left: 20px;
+	width: 650px;
+}
+
+#feed .item {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eee;
+	line-height: 22px
+}
+
+#feed .item em {
+	color: #aaa;
+	font-size: 14px;
+}

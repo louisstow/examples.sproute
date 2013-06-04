@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>FaceBlock</title>
+	<link href="/public/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="header">
+	<h1><a href="/">FakeBlock</a></h1>
+
+	{{ if session.user }}
+		You are <a href="/profile/{{session.user.name}}">{{session.user.name}}</a> |
+		<a onclick="doPost('/api/logout')">Logout</a>
+	{{ else }}
+		<a href="/login">Login</a> or 
+		<a href="/register">Create an account</a>
+	{{ / }}
+</div>
