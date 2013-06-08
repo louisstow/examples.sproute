@@ -1,0 +1,5 @@
+{
+	"POST /data/*": "admin",
+	"GET /admin/*": "admin",
+	"GET /admin": "admin"
+}

@@ -1,5 +1,6 @@
 {
 	"name": "String",
 	"title": "String",
-	"content": "String"
+	"content": "String",
+	"order": "Number"
 }

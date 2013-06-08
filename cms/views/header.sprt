@@ -4,3 +4,14 @@
 </head>
 <body>
 <h1>Pet Shop</h1>
+
+<div id="nav">
+	{{ get /data/pages?sort=order as pages }}
+	{{ each pages as page }}
+		<a href="/{{page.name}}">{{page.title}}</a>
+	{{ / }}
+
+	{{ if session.user.role eq admin }}
+		<a href="/admin">Admin</a>
+	{{ / }}
+</div>

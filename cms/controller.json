@@ -3,5 +3,6 @@
 	"/admin": "admin",
 	"/admin/edit/:id": "edit",
 	"/admin/create": "create",
+	"/login": "login",
 	"/:page": "page"
 }

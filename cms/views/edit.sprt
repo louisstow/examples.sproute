@@ -7,6 +7,7 @@
 <form action="/data/pages/_id/{{params.id}}?goto=/admin" method="post">
 <label>Name: <input type="text" name="name" value="{{page.name}}" /></label>
 <label>Title: <input type="text" name="title" value="{{page.title}}" /></label>
+<label>Order: <input type="text" name="order" value="{{page.order}}" /></label>
 <textarea name="content">{{page.content}}</textarea>
 <p><button type="submit">Create Page</button>
 </form>
