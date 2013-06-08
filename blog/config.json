@@ -1,7 +1,3 @@
 {
-	"models": "models",
-	"views": "views",
-	"controller": "controller.json",
-	"extension": "sprt",
-	"permissions": "permissions.json"
+	"name": "blog"
 }

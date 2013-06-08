@@ -1,0 +1,15 @@
+{{ include header.sprt }}
+
+{{ get /data/pages/name/:params.page?single=true as page }}
+
+{{ if page }}
+	<h2>{{page.title}}</h2>
+	{{#page.content}}
+{{ else }}
+	<h1>No page found</h1>
+	<p>Sorry but we couldn't find the request page:
+		<strong>{{params.page}}</strong>.
+	</p>
+{{ / }}
+
+{{ include footer.sprt }}

@@ -1,0 +1,10 @@
+{{ include header.sprt }}
+
+<form action="/data/pages?goto=/admin" method="post">
+<label>Name: <input type="text" name="name" /></label>
+<label>Title: <input type="text" name="title" /></label>
+<textarea name="content"></textarea>
+<p><button type="submit">Create Page</button>
+</form>
+
+{{ include footer.sprt }}

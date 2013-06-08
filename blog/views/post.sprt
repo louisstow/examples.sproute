@@ -1,7 +1,12 @@
-{get /data/posts/_id/:params.id?single=true as post}
-{set title :post.title}
+{{ get /data/posts/_id/:params.id?single=true as post }}
+{{ set title :post.title }}
 
-{include header.sprt}
-<h1>{post.title}</h1>
-<div>{#post.post}</div>
-{include footer.sprt}
+{{ include header.sprt }}
+<div id="post">
+<h2>{{ post.title }}</h2>
+<div class="content">
+	{{ #post.post }}
+</div>
+</div>
+
+{{ include footer.sprt }}

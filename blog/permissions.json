@@ -1,11 +1,4 @@
 {
-	"POST /data/posts": {
-		"anyone": false,
-		"user": true
-	},
-
-	"GET /write": {
-		"anyone": false,
-		"user": true
-	}
+	"POST /data/posts": "admin",
+	"GET /write": "moderators"
 }

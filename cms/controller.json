@@ -1,0 +1,7 @@
+{
+	"/": "index",
+	"/admin": "admin",
+	"/admin/edit/:id": "edit",
+	"/admin/create": "create",
+	"/:page": "page"
+}

@@ -1,16 +1,28 @@
 <html>
 <head>
-	<title>MYBLOG - {title}</title>
+	<title>Louis Blog - {{title}}</title>
+	<link href="/public/styles.css" rel="stylesheet" />
 </head>
 
 <body>
-<h1><a href="/">MYBLOG</a></h1>
-<a href="/write">Write</a> | 
+<header>
+	<h1><a href="/">Louis Blog</a></h1>
+	<div id="description">My blog about the wonderful <a href="http://sproute.io/">Sproute.io</a></div>
 
-{if session.user}
-	Welcome, {session.user.name}, 
-	<a href="/logout">Logout</a>
-{else}
-	<a href="/login">Login</a>
-{/}
-<hr />
+	<div class="links">
+	{{ if session.user.role eq admin }}
+		<a href="/write">Write</a> |
+	{{ / }} 
+
+
+	{{ if session.user }}
+		Welcome, {{session.user.name}}, 
+		<a href="/logout">Logout</a>
+	{{ else }}
+		<a href="/login">Login</a>
+	{{ / }}
+
+	</div>
+</header>
+
+<div id="content">

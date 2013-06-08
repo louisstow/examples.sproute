@@ -1,0 +1,8 @@
+{{ include header.sprt }}
+
+{{ get /data/pages/name/home?single=true as page }}
+
+<h2>{{page.title}}</h2>
+{{#page.content}}
+
+{{ include footer.sprt }}

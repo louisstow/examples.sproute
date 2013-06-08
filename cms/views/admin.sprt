@@ -1,0 +1,23 @@
+{{ include header.sprt }}
+
+{{ get /data/pages as pages }}
+
+<a href="/admin/create">Create a Page</a>
+
+{{ if pages.length }}
+<ul>
+{{ each pages as page }}
+	<li>
+		<a href="/admin/edit/{{page._id}}">
+			<strong>{{page.name}}</strong> &mdash; 
+			{{page.title}}
+		</a>
+	</li>
+{{ /each }}
+</ul>
+
+{{ else }}
+	<p>No pages created.</p>
+{{ /if }}
+
+{{ include footer.sprt }}
