@@ -1,0 +1,9 @@
+<li>
+	<a href="{{link.ur}}" target="_blank">{{link.title}}</a><br />
+	<small>
+		<a href="/r/{{link.subreddit}}">{{link.subreddit}}</a> |
+		<a href="/link/{{link._id}}">Comments</a> |
+		submitted by
+		<a href="/u/{{link._creatorName}}">{{link._creatorName}}</a>
+	</small>
+</li>

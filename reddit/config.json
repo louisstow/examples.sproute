@@ -1,5 +1,6 @@
 {
 	"secret": "hello",
+	"name": "reddit",
 	"admin": {
 		"name": "louis",
 		"pass": "P4$$w0rd",

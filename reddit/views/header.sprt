@@ -1,9 +1,21 @@
-<h3><a href="/">Reddit</a> Clone</h3>
-<a href="/submit/">Submit</a>
-{{if session.user}}
-	<a href="/u/{{session.user.name}}">{{session.user.name}}</a>
-	<a href="/api/logout">Logout</a>
-{{else}}
-	<a href="/login">Login</a>
-	<a href="/register">Register</a>
-{{/}}
+<html>
+<head>
+	<title>Reddit Clone</title>
+	<link href="/public/style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="header">
+	<h3><a href="/">Reddit</a> Clone</h3>
+	<div class="nav">
+	<a href="/submit/" class="highlighted">Submit</a>
+	{{ if session.user }}
+		<a href="/u/{{session.user.name}}">{{session.user.name}}</a>
+		<a href="/api/logout">Logout</a>
+	{{ else }}
+		<a href="/login">Login</a>
+		<a href="/register">Register</a>
+	{{ / }}
+	</div>
+</div>
+
+<div class="content">

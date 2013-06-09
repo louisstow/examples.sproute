@@ -1,4 +1,4 @@
-{{include header.sprt}}
+{{ include header.sprt }}
 <form action="/data/link" method="post">
 title: <input type="text" name="title" /> <br />
 url: <input type="text" name="url" /> <br />
@@ -6,3 +6,4 @@ subreddit: <input type="text" name="subreddit" value="{{params.reddit}}" />
 <input type="hidden" name="_csrf" value="{{session._csrf}}" />
 <button type="submit">Submit</button>
 </form>
+{{ include footer.sprt }}

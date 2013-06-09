@@ -1,14 +1,12 @@
-{{include header.sprt}}
-{{get /data/link/subreddit/:params.reddit as links}}
+{{ include header.sprt }}
+{{ get /data/link/subreddit/:params.reddit as links }}
+
 <h2>{{params.reddit}}</h2>
 
 <ol>
-{{each links as link}}
-	<li>
-		<a href="{{link.url}}" target="_blank">{{link.title}}</a><br />
-		<small>
-			<a href="/link/{{link._id}}">Comments</a>
-		</small>
-	</li>
-{{/each}}
+{{ each links as link }}
+	{{ include render-link.sprt }}
+{{ /each }}
 </ol>
+
+{{ include footer.sprt }}

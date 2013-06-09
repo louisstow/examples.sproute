@@ -1,7 +1,6 @@
 {{ include header.sprt }}
 
-{{ get /data/link?sort=_id,desc&limit=25 as links }}
-
+{{ get /data/link/_creatorName/:params.user?sort=_id,desc&limit=25 as links }}
 
 {{ if links.length }}
 <ol>
@@ -10,7 +9,7 @@
 	{{ /else }}
 	</ol>
 {{ else }}
-	<p>No links found :(</p>
+	<p>No links found for {{params.user}} :(</p>
 {{ /if }}
 
 

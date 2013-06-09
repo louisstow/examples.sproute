@@ -1,0 +1,63 @@
+body {
+	font-family: Helvetica, sans-serif;
+	margin: 0;
+}
+
+.header {
+	background-color: #cee3f8;
+	padding: 5px 10px;
+	border-bottom: 1px solid #5f99cf;
+}
+
+.header h3 {
+	margin: 5px 0;
+}
+
+.nav {
+	margin-top: 10px;
+}
+
+.nav a {
+	border: 1px solid #5f99cf;
+	background: #fff;
+	padding: 5px 10px;
+	color: #369;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #0022ff;
+}
+
+a:active, a.highlighted {
+	color: orangered;
+}
+
+ol li {
+	margin: 20px 0
+}
+
+.content {
+	padding: 0 20px;
+}
+
+.content ol {
+	margin-left: 0;
+	padding-left: 30px;
+}
+
+.upvote, .downvote {
+	font-size: 12px;
+	position: relative;
+}
+
+.upvote {
+	float: left;
+	left: -30px;
+	top: 0px;
+}
+
+.downvote {
+	left: -42px;
+	top: 15px
+}
