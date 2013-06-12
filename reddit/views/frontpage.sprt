@@ -13,7 +13,4 @@
 	<p>No links found :(</p>
 {{ /if }}
 
-
-<script src="/public/lib.js"></script>
-
 {{ include footer.sprt }}

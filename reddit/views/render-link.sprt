@@ -1,5 +1,5 @@
 <li>
-	<a href="{{link.ur}}" target="_blank">{{link.title}}</a><br />
+	<a href="{{link.url}}" target="_blank">{{link.title}}</a><br />
 	<small>
 		<a href="/r/{{link.subreddit}}">{{link.subreddit}}</a> |
 		<a href="/link/{{link._id}}">Comments</a> |

@@ -7,5 +7,6 @@
 		"email": "louisstow@gmail.com",
 		"role": "admin"
 	},
-	"errorView": "error"
+	"errorView": "error",
+	"strict": true
 }
