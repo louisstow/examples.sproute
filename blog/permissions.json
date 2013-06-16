@@ -1,4 +1,4 @@
 {
 	"POST /data/posts": "admin",
-	"GET /write": "moderators"
+	"GET /write": "admin"
 }

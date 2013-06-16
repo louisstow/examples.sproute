@@ -1,0 +1,11 @@
+<h1>Critter</h1>
+<p>The new wave of micro-blogging is here!</p>
+
+{{ get /data/users/role/member?limit=10 as users }}
+
+<h2>People on Critter</h2>
+<ul>
+{{ each users as user }}
+	<li><strong><a href="/{{user.name}}">{{user.name}}</a></strong></li>
+{{ /each }}
+</ul>

@@ -1,0 +1,6 @@
+{
+	"/": "home",
+	"/register": "register",
+	"/login": "login",
+	"/:user": "profile"
+}

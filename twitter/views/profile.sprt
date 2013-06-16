@@ -1,0 +1,19 @@
+{{ if session.user }}
+<form action="/data/posts?goto={{self.url}}" method="post">
+	<textarea name="content"></textarea>
+	<button type="submit">Post</button>
+</form>
+{{ /if }}
+
+{{ get /data/posts/_creatorName/:params.user as posts }}
+<h2>{{params.user}}</h2>
+{{ each posts as post }}
+	<li>
+		<div class="content">
+			{{post.content}}
+		</div>
+		<div class="meta">
+			{{post._created}}
+		</div>
+	</li>
+{{ /each }}

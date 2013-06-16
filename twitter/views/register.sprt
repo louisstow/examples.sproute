@@ -1,0 +1,7 @@
+<h1>Register to Critter</h1>
+<em>If you already have an account, <a href="/">login</a> to continue</em>
+<form action="/api/register?goto=/" method="post">
+<label>Username: <input type="text" name="name" /></label>
+<label>Password: <input type="password" name="pass" /></label>
+<button type="submit">Create account</button>
+</form>
